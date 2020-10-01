@@ -11,8 +11,8 @@ namespace morseovka
         static void Main(string[] args)
         {
             string[] M = new string[91];
-            M[65] = " . – ";
-            M[66] = " – . . . ";
+            M[65] = " . – "; 
+            M[66] = " – . . . "; 
             M[67] = " – . – . ";
             M[68] = " – . . ";
             M[69] = " . ";
@@ -38,8 +38,8 @@ namespace morseovka
             M[89] = " – . – – ";
             M[90] = " – – . . ";
 
-
-            string vstup = "filip je nejlepsi mania cz hrac xd"; //Text kterej si prelozime
+            Console.Write("Napis co ches prelozit: ");
+            string vstup = Console.ReadLine(); //Text kterej si prelozime
             string vystup = ""; //Vystpni promenna musi byt prazdna
             int kodznaku;
             vstup = vstup.ToUpper(); //Upravi na velka pismena
@@ -48,7 +48,7 @@ namespace morseovka
                 kodznaku = (int)vstup[i]; //Do promene "kodznaku" si zapiseme pocet znaku vstupu, ktery nam spocitala funkce for
                 if (kodznaku >= 65 && kodznaku <= 90) //Pokud bude znak mimo stanoveny rozsah, nezapise se nic
                 {
-                    vystup += M[kodznaku] + "/";
+                    vystup += M[kodznaku] + "/"; //Mezera
                 }
             }
             Console.Write(vystup);
